@@ -1,0 +1,104 @@
+{
+    "campers": [
+        {
+            "image": "./img/usuario.png",
+            "id": "1",
+            "name": "Angel",
+            "phone": "3114578749",
+            "email": "angel@gmail.com",
+            "address": "123 Main St",
+            "birth_day": "2005-09-25",
+            "entry_date": "2023-01-02",
+            "teamId": "1"
+        },
+        {
+            "image": "./img/usuario.png",
+            "id": "2",
+            "name": "Julian",
+            "phone": "3164578749",
+            "email": "julian@gmail.com",
+            "address": "123 Main St",
+            "birth_day": "2000-04-12",
+            "entry_date": "2022-01-02",
+            "teamId": "2"
+        },
+        {
+            "image": "./img/usuario.png",
+            "id": "3",
+            "name": "Gord",
+            "phone": "341578413",
+            "email": "gord@gmail.com",
+            "address": "123 Main St",
+            "birth_day": "2001-01-25",
+            "entry_date": "2023-01-02",
+            "teamId": "3"
+        }
+    ],
+    "teams": [
+        {
+            "id": "1",
+            "name": "Sputnik",
+            "trainer": "Miguel"
+        },
+        {
+            "id": "2",
+            "name": "Artemis",
+            "trainer": "Velmer"
+        },
+        {
+            "id": "3",
+            "name": "Apolo",
+            "trainer": "Jholber"
+        }
+    ],
+    "skill": [
+        {
+            "id": "1",
+            "name": "HTML"
+        },
+        {
+            "id": "2",
+            "name": "CSS"
+        },
+        {
+            "id": "3",
+            "name": "JS"
+        }
+    ],
+    "skill_module": [
+        {
+            "id": "1",
+            "name": "HTML"
+        },
+        {
+            "id": "2",
+            "name": "CSS"
+        },
+        {
+            "id": "3",
+            "name": "JS"
+        }
+    ],
+    "evaluation": [
+        {   
+            "id": "1",
+            "camperId": "1",
+            "moduleId": "3",
+            "qualified": "3.5"
+        },
+        {
+            "id": "1",
+            "camperId": "2",
+            "moduleId": "2",
+            "qualified": "1.5"
+
+        },
+        {
+            "id": "1",
+            "camperId": "3",
+            "moduleId": "1",
+            "qualified": "4.5"
+
+        }
+    ]
+}
