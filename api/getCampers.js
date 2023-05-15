@@ -1,36 +1,39 @@
-/* Json Server */
-const urlEndPoint = 'http://localhost:4000';
 
-/* GET method */
-const getCampers = async (item) => {
-    try {
-        const response = await fetch(`${urlEndPoint}/campers`, {
-            method: 'GET',
-            body: JSON.stringify(item),
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        });
-        const campers = await response.json()
-        return campers;
-    }
-    catch (err) {
-        console.log(err);
-    }
-}
+export default {
+    getAll() {
+        /* Json Server */
+        const urlEndPoint = 'http://localhost:4000';
 
-/* POST method */
+        /* GET method */
+        const getCampers = async (item) => {
+            try {
+                const response = await fetch(`${urlEndPoint}/campers`, {
+                    method: 'GET',
+                    body: JSON.stringify(item),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                });
+                const campers = await response.json()
+                return campers;
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
 
-/* DELETE method */
+        /* POST method */
 
-/* Show all Campers */
-async function showAllCampers() {
-    try {
-        const campersContainer = document.getElementById('.container-all-campers');
-        const allCampers = await getCampers();
+        /* DELETE method */
 
-        const template = allCampers.map((camper) => {
-            return `
+        /* Show all Campers */
+        async function showAllCampers() {
+            try {
+                const campersContainer = document.getElementById('.container-all-campers');
+                const allCampers = await getCampers();
+
+                const template = allCampers.map((camper) => {
+                    return `
               <div class="camper">
                 <img class="camper-img" src='${camper.image}' onerror="this.src='./img/usuario.png'  ">
                 <div class="camper-details">
@@ -44,10 +47,21 @@ async function showAllCampers() {
                 </div>
               </div>
             `;
-        });
-        campersContainer.innerHTML = template.join('');
-    }
-    catch (err) {
-        console.error(err);
+                });
+                campersContainer.innerHTML = template.join('');
+
+                /* Add Campers to database */
+
+
+                /* Database local Storage */
+
+
+
+            }
+            catch (err) {
+                console.error(err);
+            }
+        }
+
     }
 }
